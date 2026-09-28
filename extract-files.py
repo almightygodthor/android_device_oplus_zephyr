@@ -63,6 +63,7 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libsensorndkbridge.so', 'android.hardware.sensors@1.0-convert-shared.so'),
     'vendor/lib64/hw/audio.primary.mediatek.so': blob_fixup()
         .add_needed('libstagefright_foundation-v33.so')
+        .replace_needed('libalsautils.so', 'libalsautils-v31.so')
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
     ('vendor/lib64/mt6895/libcam.hal3a.so',
      'vendor/lib64/mt6895/libcam.hal3a.ctrl.so',
