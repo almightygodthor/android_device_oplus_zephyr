@@ -95,6 +95,10 @@ PRODUCT_COPY_FILES += \
 # Characteristics
 PRODUCT_CHARACTERISTICS := nosdcard
 
+# Device-specific settings
+PRODUCT_PACKAGES += \
+    ZephyrParts
+
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.3-service \

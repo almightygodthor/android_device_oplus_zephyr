@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.lineageos.settings"
+    android:versionCode="1"
+    android:versionName="1.0"
+    android:sharedUserId="android.uid.system">
+    <uses-sdk android:minSdkVersion="24" android:targetSdkVersion="24" />
+    <application
+        android:icon="@drawable/ic_bypass_charging"
+        android:label="@string/device_settings_app_name"
+        android:persistent="true"
+        android:theme="@style/Theme.SubSettingsBase_v31">
+        <activity
+            android:name=".bypasschrg.BypassChargingActivity"
+            android:exported="true"
+            android:theme="@style/Theme.SubSettingsBase_v31" />
+        <service
+            android:name=".bypasschrg.BypassChargingTile"
+            android:label="@string/bypass_charging_title"
+            android:icon="@drawable/ic_bypass_charging"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.service.quicksettings.TOGGLEABLE_TILE"
+                android:value="true" />
+        </service>
+        <activity
+            android:name=".TileHandlerActivity"
+            android:exported="true"
+            android:noHistory="true"
+            android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
