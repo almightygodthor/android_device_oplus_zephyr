@@ -34,6 +34,9 @@ genfscon proc /devinfo/hw_region_id    u:object_r:vendor_proc_oplus_region:s0
 genfscon proc /oplusSensorFeature    u:object_r:vendor_proc_oplus_sensor_feature:s0
 genfscon proc /sensor/als_cali       u:object_r:vendor_proc_oplus_als_file:s0
 
+# Torch strength control (AW36515 on I2C6, address 0x63).
+genfscon sysfs /devices/platform/soc/11281000.i2c/i2c-6/6-0063/torchbrightness u:object_r:vendor_torch_sysfs:s0
+
 # Touch
 genfscon proc /shell-temp    u:object_r:vendor_proc_oplus_touch:s0
 

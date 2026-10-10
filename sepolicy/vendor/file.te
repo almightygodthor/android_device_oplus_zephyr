@@ -37,3 +37,6 @@ type oplus_block_device, dev_type;
 type oplus_touchdaemon_socket, file_type;
 type vendor_persist_oplus_touch_file, file_type, data_file_type;
 type vendor_proc_oplus_touch, fs_type, proc_type;
+
+# Camera torch strength sysfs node
+type vendor_torch_sysfs, fs_type, sysfs_type;
